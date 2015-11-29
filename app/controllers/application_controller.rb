@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::API
+	
 	helper_method :current_user, :logged_in?
 
 	def current_user
@@ -21,5 +22,5 @@ class ApplicationController < ActionController::API
 		Session.find_by_session_token(session_token).destroy!
 		session[:session_token] = nil
 	end
-	
+
 end
