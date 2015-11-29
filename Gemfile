@@ -6,8 +6,14 @@ gem 'rails-api'
 gem 'pg'
 gem 'bcrypt', '~> 3.1.7'
 gem 'jbuilder'
-gem 'spring', :group => :development
-gem 'rails_12factor', group: :production
+
+group :production do
+	gem 'rails_12factor'
+end
+
+group :development do
+	gem 'spring'
+end
 
 group :development, :test do
 	gem 'byebug'
